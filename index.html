@@ -154,21 +154,31 @@
 							<li class="fragment xy-green">1. Selector Optimize</li>
 							<li class="fragment xy-green">2. Avoid Global Search</li>
 							<li class="fragment xy-green">3. Function Trottle</li>
+							<li class="fragment xy-green">　...</li>
 						</ul>
 						</script>
 					</section>
 					<section>
 						<h3>1. Selector Optimize</h3>
-						<pre><code class="hljs">
-	// A Bad Practice		// Good Practice
-
-	// jQuery			
-	$("div p a #title") 		$("#title")
-
-	// css				
-	div p a .title {} 		.title {}
+						<pre class="fragment"><code class="hljs">
+	.header ul li a {}
 
 </code></pre>
+<pre class="fragment"><code class="hljs">
+	.header div * {}
+
+</code></pre>
+
+						<pre class="fragment"><code class="hljs">
+	// Bad Practice			// Good Practice
+			
+	button#btn {} 			#btn {}
+
+	.header ul li a.link {} 		.header .link {}
+
+</code></pre>
+<div class="fragment xy-red" style="text-align:center;font-weight:bold;">匹配的规则越少，关键选择器越具体，解析就会越快！</div><br>
+<a class="more fragment xy-udl" href="http://www.w3cplus.com/css/css-selector-performance" target="_blank">Get More</a>
 					</section>
 					<section data-markdown>
 						<script type="text/template">
@@ -195,7 +205,7 @@
 			length = imgs.length,
 			i = 0;
 
-		for (; i<lengthl; i++) {
+		for (; i<length; i++) {
 			imgs[i].title = doc.title + "-images-" + i;
 		}
 		var msg = doc.getElementById("msg");
@@ -254,14 +264,15 @@
 						<script type="text/template">
 							### 1. GPU acceleration
 ```css
-.class {
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	transform: translateZ(0);
-	/* 其他动画 */
-}
+	.class {
+		-webkit-transform: translateZ(0);
+		-moz-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		-o-transform: translateZ(0);
+		transform: translateZ(0);
+		/* 其他动画 */
+	}
+
 ```
 <!-- .element: class="fragment"-->
 						</script>
@@ -302,7 +313,6 @@
 				<h1 style="color:#fff;text-align:center"><i class="fa fa-smile-o"></i>&nbsp;&nbsp;Thank you!</h1>
 				<hr>
 				</section>
-
 			</div>
 
 		</div>
