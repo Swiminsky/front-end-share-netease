@@ -1,0 +1,40 @@
+.xy-primary{
+	color:#428bca;
+}
+.xy-green {
+	color:#12a76b !important;
+}
+.xy-white {
+	color:#fff !important;
+}
+.xy-red {
+	color:rgba(234,97,83,1) !important;
+}
+a.xy-red:hover {
+	text-decoration: underline !important;
+	color:rgba(234,97,83,0.6) !important;
+}
+.xy-fcs {
+	color:#12a76b !important;
+	text-decoration: underline !important;
+}
+.xy-udl{
+	text-decoration: underline !important;
+}
+.xy-img {
+	border: none !important;
+}
+.xy-img-mg {
+	margin: 0 15px !important;
+}
+blockquote{
+	box-shadow: none;
+	font-style: normal !important;
+	color: #666 !important;
+	padding: 35px !important;
+	background-color: #f9f9f6 !important;
+	border-radius: 2em .3em !important;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3),0px 0px 1px rgba(0,0,0,.1) !important;
+	transform: skewX(-1deg) !important;
+	text-align: left !important;
+}
